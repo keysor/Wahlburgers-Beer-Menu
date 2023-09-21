@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Tap List</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black; /* Set the background color to black */
+            margin: 0;
+            padding: 0;
+            color: rgb(255, 255, 255); /* Set text color to green */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex; /* Use flexbox to arrange columns side by side */
+        }
+
+        .column {
+            flex: 1; /* Equal flex distribution for both columns */
+            background-color: #000000; /* Grey box background color */
+            padding: 20px;
+            margin-right: 20px;
+            box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2); /* Green border (rgba(0, 128, 0, 0.2)) */
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .beer-entry {
+            padding: 10px;
+            border: 1px solid #03c900; /* Darker grey border for each beer entry */
+            margin-bottom: 20px;
+            display: flex; /* Use flexbox to align image and text vertically */
+            align-items: center; /* Center items vertically */
+        }
+
+        .beer-image {
+            width: 100px; /* Fixed width for square images */
+            height: 100px; /* Fixed height for square images */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            margin-right: 20px; /* Spacing between image and text */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .brewer-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column" id="column1">
+            <h2>Left side taps</h2>
+            <!-- Beer entries for Column 1 will be added dynamically here -->
+        </div>
+        <div class="column" id="column2">
+            <h2>Right side taps</h2>
+            <!-- Beer entries for Column 2 will be added dynamically here -->
+        </div>
+    </div>
+
+    <script>
+        const column1 = document.getElementById("column1");
+        const column2 = document.getElementById("column2");
+
+        const beers = [
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer1.jpg"
+            },
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer2.jpg"
+            },
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer3.jpg"
+            },
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer4.jpg"
+            },
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer5.jpg"
+            },
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer6.jpg"
+            },
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer7.jpg"
+            },
+            {
+                name: "Tapped out!",
+                brewer:"",
+                description: "Awaiting next tap takeover.",
+                abv: "",
+                image: "beer8.jpg"
+            },
+            {
+                name: "Snapper",
+                brewer:"Logboat Brewing Company",
+                description: "This easy drinking IPA is loaded up with four varieties of American grown hops.",
+                abv: "7.5%",
+                image: "snapper.jpeg"
+            },
+            {
+                name: "Bobber",
+                brewer:"Logboat Brewing Company",
+                abv: "5.0%",
+                description: "An unfiltered Lager brewed with inspiration from the pale German lagers.",
+                image: "bobber.jpeg"
+            },
+            {
+                name: "Tank 7",
+                brewer:"Boulevard Brewing Company",
+                abv: "8.5%",
+                description: "Beginning with a big surge of fruity aromatics and grapefruit-hoppy notes, the flavor of this complex, straw-colored ale tapers off to a peppery, dry finish.",
+                image: "tank7.jpg"
+            },
+            {
+                name: "Juice Force",
+                brewer: "New Belgium Brewing Company",
+                abv: "9.5%",
+                description: "This beer is full of tropical flavors and aromas of pineapple, guava, peach and plenty of citrus.",
+                image: "beer12.jpg"
+            },
+            {
+                name: "Yeungling",
+                brewer: "Yuengling Brewery",
+                abv: "4.5%",
+                description: "Famous for its rich amber color and medium-bodied flavor, with roasted caramel malt for a subtle sweetness and a combination of cluster and cascade hops.",
+                image: "beer13.jpg"
+            },
+            {
+                name: "Beer 14",
+                brewer:"",
+                description: "This beer has a hint of hops and a smooth finish. Sed sit amet tortor in arcu dictum ultrices.",
+                image: "beer14.jpg"
+            },
+            {
+                name: "Beer 15",
+                brewer:"",
+                description: "This beer has a hint of hops and a smooth finish. Sed sit amet tortor in arcu dictum ultrices.",
+                image: "beer15.jpg"
+            },
+            {
+                name: "Beer 16",
+                brewer:"",
+                description: "This beer has a hint of hops and a smooth finish. Sed sit amet tortor in arcu dictum ultrices.",
+                image: "beer16.jpg"
+            },
+            {
+                name: "Beer 17",
+                brewer:"",
+                description: "This beer has a hint of hops and a smooth finish. Sed sit amet tortor in arcu dictum ultrices.",
+                image: "beer17.jpg"
+            },
+            {
+                name: "Stella Artois",
+                brewer:"",
+                description: "This beer has a hint of hops and a smooth finish. Sed sit amet tortor in arcu dictum ultrices.",
+                image: "beer18.jpg"
+            },
+            {
+                name: "Beer 19",
+                brewer:"",
+                description: "This beer has a hint of hops and a smooth finish. Sed sit amet tortor in arcu dictum ultrices.",
+                image: "beer19.jpg"
+            },
+            {
+                name: "Beer 20",
+                brewer:"",
+                description: "This beer has a hint of hops and a smooth finish. Sed sit amet tortor in arcu dictum ultrices.",
+                image: "beer20.jpg"
+            }
+        ];
+
+        let index1 = 0;
+        let index2 = 8;
+
+        function updateEntries() {
+            updateColumn(column1, index1, 8);
+            updateColumn(column2, index2, 20);
+
+            index1 = (index1 + 4) % 8;
+            index2 = (index2 + 4) % 20;
+            if (index2 == 0) {
+                index2 = 8;
+            }
+        }
+        
+        function updateColumn(column, startIndex, endIndex) {
+            const beerEntries = beers.slice(startIndex, endIndex).slice(0, 4);
+
+            column.innerHTML = ""; // Clear existing entries
+
+            beerEntries.forEach((beer, index) => {
+                const beerEntry = document.createElement("div");
+                beerEntry.classList.add("beer-entry");
+
+                const beerImage = document.createElement("img");
+                beerImage.classList.add("beer-image");
+                beerImage.src = beer.image;
+                beerImage.alt = beer.name;
+
+                const ul = document.createElement("ul");
+                const beerName = document.createElement("li");
+                beerName.textContent = `${beer.name}`; // Display the beer's name
+                const brewerName = document.createElement("li");
+                brewerName.textContent = `${beer.brewer}`; // Display the brewer's name
+                const beerDescription = document.createElement("li");
+                beerDescription.textContent = `${beer.description}`;
+                const beerABV = document.createElement("li");
+                beerABV.textContent = `ABV: ${beer.abv}`; // Display ABV information
+
+                ul.appendChild(beerName);
+                ul.appendChild(brewerName);
+                ul.appendChild(beerDescription);
+                ul.appendChild(beerABV); // Add the ABV information to the list
+
+                beerEntry.appendChild(beerImage);
+                beerEntry.appendChild(ul);
+
+                column.appendChild(beerEntry);
+            });
+        }
+
+        // Update entries every 10 seconds (10000 milliseconds)
+        setInterval(updateEntries, 10000);
+
+        // Initialize the entries
+        updateEntries();
+        
+    </script>
+    
+</body>
+</html>
