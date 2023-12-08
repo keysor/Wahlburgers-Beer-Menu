@@ -24,7 +24,7 @@
         .column {
             flex: 1; /* Equal flex distribution for both columns */
             background-color: #000000; /* Grey box background color */
-            padding: 20px;
+            padding: 10px;
             margin-right: 20px;
             box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2); /* Green border (rgba(0, 128, 0, 0.2)) */
         }
@@ -259,9 +259,9 @@
                 beerImage.alt = beer.name;
 
                 const ul = document.createElement("ul");
-                const beerName = document.createElement(".li2");
+                const beerName = document.createElement("li");
                 beerName.textContent = `${beer.name}`; // Display the beer's name
-                const brewerName = document.createElement("li");
+                const brewerName = document.createElement("li2");
                 brewerName.textContent = `${beer.brewer}`; // Display the brewer's name
                 const beerDescription = document.createElement("li");
                 beerDescription.textContent = `${beer.description}`;
