@@ -55,6 +55,10 @@
             padding: 0;
         }
         .li2 {
+            font-size: 52px; /* Set font size to 18px */
+            margin-bottom: 10px;
+        }
+        .li3 {
             font-size: 26px; /* Set font size to 18px */
             margin-bottom: 10px;
         }
@@ -261,7 +265,7 @@
                 const ul = document.createElement("ul");
                 const beerName = document.createElement(".li2");
                 beerName.textContent = `${beer.name}`; // Display the beer's name
-                const brewerName = document.createElement("li");
+                const brewerName = document.createElement(".li3");
                 brewerName.textContent = `${beer.brewer}`; // Display the brewer's name
                 const beerDescription = document.createElement("li");
                 beerDescription.textContent = `${beer.description}`;
