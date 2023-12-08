@@ -54,7 +54,10 @@
             list-style-type: none;
             padding: 0;
         }
-
+        .li2 {
+            font-size: 26px; /* Set font size to 18px */
+            margin-bottom: 10px;
+        }
         li {
             font-size: 22px; /* Set font size to 18px */
             margin-bottom: 10px;
@@ -256,7 +259,7 @@
                 beerImage.alt = beer.name;
 
                 const ul = document.createElement("ul");
-                const beerName = document.createElement("li");
+                const beerName = document.createElement("li2");
                 beerName.textContent = `${beer.name}`; // Display the beer's name
                 const brewerName = document.createElement("li");
                 brewerName.textContent = `${beer.brewer}`; // Display the brewer's name
