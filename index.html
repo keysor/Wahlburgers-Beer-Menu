@@ -262,7 +262,7 @@
 
                 const ul = document.createElement("ul");
                 const beerName = document.createElement("li");
-                beerName.innerHTML = `<strong>${beer.name}</strong>`; // Display the beer's name in bold
+                beerName.innerHTML = `<strong><span style="font-size: 30px;">${beer.name}</span></strong>`; // Display the beer's name in bold with increased font size
                 const brewerName = document.createElement("li");
                 brewerName.textContent = `${beer.brewer}`; // Display the brewer's name
                 const beerDescription = document.createElement("li");
