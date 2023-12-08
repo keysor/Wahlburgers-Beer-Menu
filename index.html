@@ -24,14 +24,13 @@
         .column {
             flex: 1; /* Equal flex distribution for both columns */
             background-color: #000000; /* Grey box background color */
-            padding: 10px;
+            padding: 20px;
             margin-right: 20px;
             box-shadow: 0 4px 12px rgba(0, 128, 0, 0.2); /* Green border (rgba(0, 128, 0, 0.2)) */
         }
 
         h2 {
             font-size: 24px;
-            font-weight: bold;
             margin-bottom: 10px;
         }
 
@@ -54,10 +53,7 @@
             list-style-type: none;
             padding: 0;
         }
-        .li2 {
-            font-size: 26px; /* Set font size to 18px */
-            margin-bottom: 10px;
-        }
+
         li {
             font-size: 22px; /* Set font size to 18px */
             margin-bottom: 10px;
@@ -65,6 +61,7 @@
         
         .brewer-name {
             font-size: 18px; /* Set font size to 18px */
+            font-weight: bold;
             margin-bottom: 10px;
         }
         
@@ -261,7 +258,7 @@
                 const ul = document.createElement("ul");
                 const beerName = document.createElement("li");
                 beerName.textContent = `${beer.name}`; // Display the beer's name
-                const brewerName = document.createElement("li2");
+                const brewerName = document.createElement("li");
                 brewerName.textContent = `${beer.brewer}`; // Display the brewer's name
                 const beerDescription = document.createElement("li");
                 beerDescription.textContent = `${beer.description}`;
