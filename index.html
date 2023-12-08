@@ -52,12 +52,16 @@
         ul {
             list-style-type: none;
             padding: 0;
-            
         }
 
         li {
             font-size: 22px; /* Set font size to 18px */
             margin-bottom: 5px;
+        }
+        .li2 {
+            font-size: 28px; /* Set font size to 18px */
+            margin-bottom: 5px;
+            list-style-type: none;
         }
         
         .brewer-name {
@@ -258,7 +262,7 @@
 
                 const ul = document.createElement("ul");
                 const beerName = document.createElement("li");
-                beerName.textContent = `${beer.name}`; // Display the beer's name
+                beerName.innerHTML = `<strong>${beer.name}</strong>`; // Display the beer's name in bold
                 const brewerName = document.createElement("li");
                 brewerName.textContent = `${beer.brewer}`; // Display the brewer's name
                 const beerDescription = document.createElement("li");
@@ -266,7 +270,7 @@
                 const beerABV = document.createElement("li");
                 beerABV.textContent = `ABV: ${beer.abv}`; // Display ABV information
 
-                ul.appendChild(beerName);
+                ul.appendChild(beerName); 
                 ul.appendChild(brewerName);
                 ul.appendChild(beerDescription);
                 ul.appendChild(beerABV); // Add the ABV information to the list
